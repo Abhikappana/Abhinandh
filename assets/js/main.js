@@ -152,28 +152,27 @@ ScrollReveal({
 });
 // ========== contact =========
 function send(){
-    (function(){
-        emailjs.init("IyLnSCStvPr9bvFRu");
-    })();
+    var Name= document.getElementById("name").value;
+    var Email= document.getElementById("email").value;
+    var subject= document.getElementById("subject").value;
+    var message= document.getElementById("message").value;
 
-    var serviceID ="service_58f1u5h";// Email Service ID
-    var templateID="template_8mz56xj";  //template ID
+    var body = "Name: " + Name +"\nEmail:"+Email+"\nSubject:"+subject+" \nMessage:"+message;
 
-    var senderdetails={
-        senderName :document.querySelector("#name").value,
-        senderEmail :document.querySelector("#email").value,
-        subject :document.querySelector("#subject").value,
-        message :document.querySelector("#message").value
-    };
-
-    emailjs.send(serviceID,templateID,senderdetails)
-    .then( res => {
-        alert(senderdetails['sendername']+"Your message has been sent ")
-    })
-    .catch()
-
+    console.log(body);
+    Email.send({
+        Most : "smtp.elasticemail.com",
+        username:"abhikappana@gmail.com",
+        password:"A4184F8B293201D1CAD5136A9DB135F9FD42",
+        To:'abhikappana@gmail.com',
+        from:Email,
+        Subject:subject,
+        Body:body
+    
+    }).then(
+        message => alert(message)
+    );
 }
-
 
 
 
