@@ -151,28 +151,28 @@ ScrollReveal({
     delay:50
 });
 // ========== contact =========
-function send(){
-    var Name= document.getElementById("name").value;
-    var Email= document.getElementById("email").value;
-    var subject= document.getElementById("subject").value;
-    var message= document.getElementById("message").value;
+// function send(){
+//     var Name= document.getElementById("name").value;
+//     var Email= document.getElementById("email").value;
+//     var subject= document.getElementById("subject").value;
+//     var message= document.getElementById("message").value;
 
-    var body = "Name: " + Name +"\nEmail:"+Email+"\nSubject:"+subject+" \nMessage:"+message;
+//     var body = "Name: " + Name +"\nEmail:"+Email+"\nSubject:"+subject+" \nMessage:"+message;
 
-    console.log(body);
-    Email.send({
-        Most : "smtp.elasticemail.com",
-        username:"abhikappana@gmail.com",
-        password:"A4184F8B293201D1CAD5136A9DB135F9FD42",
-        To:'abhikappana@gmail.com',
-        from:Email,
-        Subject:subject,
-        Body:body
+//     console.log(body);
+//     Email.send({
+//         Most : "smtp.elasticemail.com",
+//         username:"abhikappana@gmail.com",
+//         password:"A4184F8B293201D1CAD5136A9DB135F9FD42",
+//         To:'abhikappana@gmail.com',
+//         from:Email,
+//         Subject:subject,
+//         Body:body
     
-    }).then(
-        message => alert(message)
-    );
-}
+//     }).then(
+//         message => alert(message)
+//     );
+// }
 
 
 
