@@ -160,8 +160,8 @@ function send(){
     var templateID="template_8mz56xj";  //template ID
 
     var senderdetails={
-        sendername :document.querySelector("#name").value,
-        senderemail :document.querySelector("#email").value,
+        senderName :document.querySelector("#name").value,
+        senderEmail :document.querySelector("#email").value,
         subject :document.querySelector("#subject").value,
         message :document.querySelector("#message").value
     };
@@ -170,6 +170,8 @@ function send(){
     .then( res => {
         alert(senderdetails['sendername']+"Your message has been sent ")
     })
+    .catch()
+
 }
 
 
