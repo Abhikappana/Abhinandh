@@ -151,34 +151,25 @@ ScrollReveal({
     delay:50
 });
 // ========== contact =========
-function validateForm() {
-    var name = document.forms["contactForm"]["name"].value;
-    var email = document.forms["contactForm"]["email"].value;
-    var message = document.forms["contactForm"]["message"].value;
-    var error = "";
+function send(){
+    (function(){
+        emailjs.init("IyLnSCStvPr9bvFRu");
+    })();
 
-    if (name == "") {
-        error += "Please enter your name.\n";
-    }
+    var serviceID ="service_58f1u5h";// Email Service ID
+    var templateID="template_8mz56xj";  //template ID
 
-    if (email == "") {
-        error += "Please enter your email address.\n";
-    } else if (!validateEmail(email)) {
-        error += "Please enter a valid email address.\n";
-    }
+    var senderdetails={
+        sendername :document.querySelector("#name").value,
+        senderemail :document.querySelector("#email").value,
+        subject :document.querySelector("#subject").value,
+        message :document.querySelector("#message").value
+    };
 
-    if (message == "") {
-        error += "Please enter a message.\n";
-    }
-
-    if (error != "") {
-        alert(error);
-        return false;
-    }
-}
-function validateEmail(email) {
-    var re = /\S+@\S+\.\S+/;
-    return re.test(email);
+    emailjs.send(serviceID,templateID,senderdetails)
+    .then( res => {
+        alert(senderdetails['sendername']+"Your message has been sent ")
+    })
 }
 
 
