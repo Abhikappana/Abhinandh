@@ -730,6 +730,7 @@ header.sticky .nav-bar{
 
 .service-modal-body ul li i{
     color:var(--second-color);
+    padding: 5px;
 }
 
 /* Portfolio Section */
