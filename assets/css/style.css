@@ -3,7 +3,7 @@
 
 :root{
     /* change theme colors */
-    --hue-color:250; /* purple 250 , green 142 , blue 230 , pink 340*/
+    --hue-color:240; /* purple 250 , green 142 , blue 230 , pink 340*/
 
     --first-color:hsl(var(--hue-color), 3%, 21%);
     --second-color:hsl(var(--hue-color), 71%, 65%);
@@ -79,16 +79,16 @@
 }
 
 html{
-
+    
     scroll-behavior: smooth;
-
+    
 }
 
 body{
-    overflow-x: hidden;
+    
     color: var(--first-color);
     background: var(--body-bg-color);
-    margin:0;
+    margin: 2rem 0 0 0;
     transition: 5s ease;
    
 }
@@ -676,6 +676,7 @@ header.sticky .nav-bar{
     top:0;
     left:0;
     background: var(--bg-transparent-color);
+    backdrop-filter:blur(10px);
     visibility: hidden;
     opacity: 0;
     transition: .3s ease;
@@ -800,12 +801,12 @@ header.sticky .nav-bar{
 .portfolio-modal{
     z-index: 999999;
     position:fixed;
-    height:100vh;
     width:100%;
+    height:100vh;
     top:0;
     left:0;
-    background: var(--bg-transparent-color);
-    backdrop-filter: blur(10px);
+    background: var(--transparent-color-01);
+    backdrop-filter: blur(20px);
     visibility:hidden ;
     opacity: 0;
     transition: .3s ease;
@@ -1332,9 +1333,9 @@ footer a{
     }
     .home .home-container .info h2{
         line-height:normal;
-        font-size: 1.75em;
+        font-size: 2.5em; 
+        font-size: 2.1em;
         font-weight: 600;
-        
     }
     .home .home-container .info h3{
         font-size: 1.3em;
@@ -1345,7 +1346,7 @@ footer a{
 
     .home-container .home-img .home-blob{
         width:80%;
-        transform: translate(-10px, -150px);
+        transform: translate(6px, -160px);
     }
 
     .home  .home-container .info{
@@ -1356,7 +1357,6 @@ footer a{
     .home .home-container .media-icons a i{
         font-size:.8em;
         padding-bottom: 8px;
-        
     }
     .media-icons{
         margin-bottom: 20px;

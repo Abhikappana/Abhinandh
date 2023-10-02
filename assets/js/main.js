@@ -88,26 +88,36 @@ if(savedTheme){
 }
 
 
+//Scroll to top button
+const scrollTopBtn = document.querySelector(".scrollToTop-btn");
+
+window.addEventListener("scroll",function(){
+    scrollTopBtn.classList.toggle("active",window.scrollY > 500 );
+});
+
+scrollTopBtn.addEventListener("click", () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
 
 //Navigaton menu items active on page scroll
 window.addEventListener("scroll", () => {
     const sections= document.querySelectorAll("section");
     const scrollY = window.scrollY;
 
-//     sections.forEach(current => {
-//         let sectionHeight = current.offsetHeight;
-//         let sectionTop = current.offsetTop - 50;
-//         let id = current.getAttribute("id");
+    sections.forEach(current => {
+        let sectionHeight = current.offsetHeight;
+        let sectionTop = current.offsetTop - 50;
+        let id = current.getAttribute("id");
 
-//         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-//             document.querySelector(".nav-items a[href*="+ id +"]").classList.add("active");
-//         }
-//         else{
-//             document.querySelector(".nav-items a[href*="+ id +"]").classList.remove("active");   
-//         }
-//     });
-// });
-
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector(".nav-items a[href*="+ id +"]").classList.add("active");
+        }
+        else{
+            document.querySelector(".nav-items a[href*="+ id +"]").classList.remove("active");   
+        }
+    });
+});
 //Responsive navigation menu toggle
 const menuBtn= document.querySelector(".nav-menu-btn");
 const closeBtn= document.querySelector(".nav-close-btn");
@@ -140,40 +150,6 @@ ScrollReveal({
     duration:1500,
     delay:50
 });
-
-// contact form 
-const contactForm =document.getElementById("contact-form"),
-serviceID = "service_58f1u5h",
-templateID = "template_8mz56xj",
-templateParams = contactForm,
-publicKey = "IyLnSCStvPr9bvFRu"
-
-function sendEmail(e){
-    e.preventDefault();
-    emailjs.sendForm(serviceID, templateID, templateParams, publicKey).then
-    (response => {
-        console.log(response.status,response.text);
-        statusBox.textContent ="The message was sent successfully";
-    });
-    error =>{
-        console.log(error);
-        statusBox.textContent ="The message wasn't sent successfully";
-    }
-}
-
-contactForm.addEventListener("submit",sendEmail);
-//Scroll to top button
-const scrollTopBtn = document.querySelector(".scrollToTop-btn");
-
-window.addEventListener("scroll",function(){
-    scrollTopBtn.classList.toggle("active",window.scrollY > 500 );
-});
-
-scrollTopBtn.addEventListener("click", () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-});
-
 
 //Target elements,and specify options to create reveal animations
 ScrollReveal().reveal('.home .info h2, .section-title-01, .section-title-02', {delay:400,orgin:'left'});
