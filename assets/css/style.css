@@ -3,17 +3,17 @@
 
 :root{
     /* change theme colors */
-    --hue-color:240; /* purple 250 , green 142 , blue 230 , pink 340*/
+    --hue-color:260; /* purple 250 , green 142 , blue 230 , pink 340*/
 
-    --first-color:hsl(var(--hue-color), 3%, 21%);
+    --first-color:hsl(var(--hue-color), 4%, 25%);
     --second-color:hsl(var(--hue-color), 71%, 65%);
-    --third-color:hsl(var(--hue-color), 1%, 55%);
+    --third-color:hsl(var(--hue-color), 15%, 55%);
 
     /* Hover color */
     --hover-color:hsl(var(--hue-color), 58%, 56%);
 
     /*Background color */
-    --body-bg-color:hsl(var(--hue-color), 0%, 96%);
+    --body-bg-color:hsl(var(--hue-color), 0%, 99%);
     --card-bg-color:hsl(var(--hue-color), 100%, 100%);
     --modal-bg-color:hsl(var(--hue-color), 100%, 100%);
     --bg-transparent-color:rgba(0,0,0,0.1);
@@ -801,13 +801,13 @@ header.sticky .nav-bar{
 .portfolio-modal{
     z-index: 999999;
     position:fixed;
+    height:100%;
     width:100%;
-    height:100vh;
     top:0;
     left:0;
-    background: var(--transparent-color-01);
-    backdrop-filter: blur(20px);
-    visibility:hidden ;
+    background: var(--bg-transparent-color);
+    backdrop-filter:blur(10px);
+    visibility: hidden;
     opacity: 0;
     transition: .3s ease;
 }
@@ -818,12 +818,12 @@ header.sticky .nav-bar{
 }
 
 .portfolio-modal-body{
-    position: relative;
+    position: sticky;
     background: var(--modal-bg-color);
     max-width: 600px;
-    margin:30px;
+    margin:20px;
     padding:40px;
-    border-radius: 10px;
+    border-radius:10px;
     box-shadow: var(--box-shadow);
     transform: translateY(-50px);
     transition: .5s ease;
@@ -842,119 +842,19 @@ header.sticky .nav-bar{
 }
 
 .portfolio-modal-body img{
-    width: 90%;
+    width: 100%;
     margin:20px 0;
     border-radius:10px
 }
-
-
-/* Get in touch */
-.get-in-touch{
-    margin-top:70px;
-}
-.get-in-touch .container .content{
-    width:100%;
+.portfolio-modal-body h3{
+    font-size: 2em;
 }
 
-.get-in-touch .contact-card{
-    position: relative;
-    width: 90%;
-    background: var(--card-bg-color);
-    box-shadow: var(--box-shadow);
-    padding: 50px;
-    border-radius: 10px;
-    column-gap: 50px;
-    margin: 10%;
-}
-
-.contact-card .title{
-    text-transform: uppercase;
-    line-height:60px;
-}
-
-.contact-card .title h4{
-    font-size: 1.2em;
-    font-weight: 300;
-    line-height: 20px;
-}
-
-.contact-card .title h3{
-    font-size: 2.3em;
-    font-weight: 400;
-}
-
-.contact-card .title h2{
-    font-size: 4.2em;
-    font-weight: 700;
-    background: linear-gradient(to top,transparent 0%,var(--first-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: .9;
-}
-/* Our Client */
-/* .our-client .content{
-    flex-direction: colunm;
-
-}
-
-.our-client .container .content{
-    width:100%;
-}
-
-.client-swiper .swiper-wrapper{
-    margin-bottom: 30px;
-}
-.client-swiper .swiper-slide{
-    gap:50px;
-    margin:20px 0;
-}
-
-.client-img{
-    width:250px;
-    height:250px;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.client-img img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-.client-details{
-    max-width: 500px;
-}
-
-.client-details p{
-    font-size: 1.2em;
-    color:var(--third-color);
-    padding-bottom: 15px;
-    margin-bottom: 10px;
-    border-bottom: 2px solid var(--line-color);
-}
-
-.client-details h3{
-    color:var(--first-color);
-    font-size: 1.5em;
-}
-.client-details  span{
-    color:var(--third-color);
-    font-size: 1.1em;
-}
-
-.swiper-button-next:after, .swiper-button-prev:after{
-    content: '';
-}
-
-.swiper-button-next, .swiper-button-prev{
+.portfolio-modal-body a{
     color:var(--second-color);
-    font-size: 3em;
+    padding: 5px;
 }
 
-.swiper-pagination-bullet, .swiper-pagination-bullet-active{
-    background: var(--second-color);
-} */
 
 /* Contact Section */
 .contact .container .content{
