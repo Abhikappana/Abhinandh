@@ -137,7 +137,9 @@ li{
     box-shadow: var(--box-shadow);
     cursor: pointer;
 }
-
+.theme-btn:hover{
+    transform: translateX(-1);
+}
 .theme-btn .fa-sun, .theme-btn.sun .fa-moon{
     display: none;
 }
@@ -195,13 +197,14 @@ header.sticky .nav-bar{
 
 
 .nav-bar .logo {
-    margin-right: 50%px;
+    margin-right: 50px;
     color: var(--first-color);
     font-size: 1.5rem;
     font-weight: 600;
-    
 }
-
+.nav-bar .logo:hover{
+    color: var(--hover-color);
+}
 
 .nav-items a{
     color:var(--first-color);
@@ -250,6 +253,7 @@ header.sticky .nav-bar{
 
 .home-container .media-icons{
     display: grid;
+    gap: 5px;
     margin-right:30px ;
 }
 .home-container .media-icons a{
@@ -301,21 +305,19 @@ header.sticky .nav-bar{
     position:relative;
     max-width: 500px;
     width: 100%;
+   
 }
 
-/* .home-container .home-img img{
-    width: 100%;
-    max-width: 500px;
-} */
+
 .home-container .home-img .home-blob{
     width:100%;
     max-width: 600px;
     fill: var(--second-color);
-    /* transform: translate(5px,-55px) */
+    /* transform: translate(50px,-50px); */
 
 }
 .home-blob-img{
-    width: 85%;
+    width: 83%;
     /* transform: translate(8px,10px); */
 }
 .home .scroll-down{
@@ -660,12 +662,13 @@ header.sticky .nav-bar{
 }
 
 .service-card .learn-more-btn i{
+    margin-left: 5px;
     transition: .3s ease;
 }
 
 .service-card:hover .learn-more-btn i{
     transform: translateX(10px);
-    
+    color: var(--hover-color);
 }
 
 .service-modal{
@@ -828,6 +831,9 @@ header.sticky .nav-bar{
     box-shadow: var(--box-shadow);
     transform: translateY(-50px);
     transition: .5s ease;
+}
+.portfolio-modal-body a:hover{
+    color: var(--hover-color);
 }
 
 .portfolio-modal.active .portfolio-modal-body{
