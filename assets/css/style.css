@@ -942,6 +942,9 @@ header.sticky .nav-bar{
     border-radius:5px;
     cursor: pointer;
 }
+.contact-form .btn i{
+    padding-left: 5px;
+}
 /* Footer */
 
 footer{

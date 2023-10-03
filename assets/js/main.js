@@ -50,20 +50,7 @@ portfolioCloseBtns.forEach((portfolioCloseBtn) =>{
     });
 });
 
-//Our clients - Swiper
-// var swiper = new Swiper(".client-swiper", {
-//     slidesPerView: 1,
-//     spaceBetween: 30,
-//     loop: true,
-//     pagination: {
-//       el: ".swiper-pagination",
-//       clickable: true,
-//     },
-//     navigation: {
-//       nextEl: ".swiper-button-next",
-//       prevEl: ".swiper-button-prev",
-//     },
-//   });
+
 
 //Website dark/Light theme
 const themeBtn =document.querySelector(".theme-btn");
@@ -133,14 +120,6 @@ closeBtn.addEventListener("click", () => {
 });
 
 
-// navItems.forEach((navItem) =>{
-//     navItem.addEventListener("click",() => {
-//         navigation.classList.("active") ;
-//     });
-// });
-
-
-
 
 //Scroll reveal animations
 // Common reveal options to create reveal animations
@@ -150,6 +129,21 @@ ScrollReveal({
     duration:1500,
     delay:50
 });
+// Contact form
+function validateForm(){
+    let Name=document.forms["Form"]["name"].value;
+    let Email=document.forms["Form"]["email"].value;
+    if(Name==""){
+        window.alert("Please enter your name properly");
+        return false;
+    }
+    if(Email==""){
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+}
+
 
 //Target elements,and specify options to create reveal animations
 ScrollReveal().reveal('.home .info h2, .section-title-01, .section-title-02', {delay:400,orgin:'left'});
