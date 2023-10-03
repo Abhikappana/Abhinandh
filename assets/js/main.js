@@ -130,21 +130,53 @@ ScrollReveal({
     delay:50
 });
 // Contact form
-function validateForm(){
-    let Name=document.forms["Form"]["name"].value;
-    let Email=document.forms["Form"]["email"].value;
-    if(Name==""){
-        window.alert("Please enter your name properly");
-        return false;
-    }
-    if(Email==""){
-        window.alert("Please enter a valid e-mail address.");
-        email.focus();
-        return false;
-    }
+const form = document.getElementById('form');
+const name= document.getElementById('name');
+const email= document.getElementById('email');
+const subject= document.getElementById('subject');
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    validateInputs()
+});
+ 
+const setError =(element,message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay=inputControl.querySelector('.error');
+
+    errorDisplay = innerText = message;
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error')
 }
 
+const isValidEmail =email =>{
+    const re =;
+    return re.test(String(email).toLowerCase());
+}
 
+const validateInputs = () => {
+    const nameValue = nameValue.value.trim();
+    const emailValue = emailValue.value.trim();
+    const subValue = subValue.value.trim();
+
+    if(nameValue === ''){
+        setError(Name,'Name is required');
+    }else{
+         setSuccess(Name);
+    }
+
+    if(emailValue ===''){
+        setError(email,'Email is required');
+        } else if(!isValidEmail){
+            setSuccess(email);
+    }
+
+    if(subValue ===''){
+        setError(Sub,'Subject is required');
+        } else if(!isValidSubject){
+            setSuccess(subject);
+    }
+}
 //Target elements,and specify options to create reveal animations
 ScrollReveal().reveal('.home .info h2, .section-title-01, .section-title-02', {delay:400,orgin:'left'});
 ScrollReveal().reveal('.home .info h3, .home .info p, .about-info .btn', {delay:500,orgin:'right'});

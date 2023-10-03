@@ -171,7 +171,7 @@
                             <li class="bar">
                                 <div class="info">
                                     <span>React</span>
-                                    <span>10%</span>
+                                    <span>1%</span>
                                 </div>
                                 <div class="line React"></div>
                             </li>
@@ -367,16 +367,18 @@
                 </div>
                 <div class="contact-right">
                     <p>I'm always open to discussing product<br><span>design work or partnerships</span></p>
-                    <form action="" class="contact-form" name="For">
+                    <form action="/" class="contact-form" id="form">
                         <div class="first-row">
-                            <input type="text" name="name" placeholder="Name">
+                            <input type="text" id="name" placeholder="Name" required>
+                            <div class="error"></div>
                         </div>
                         <div class="second-row">
-                            <input type="email" placeholder="Email">
-                            <input type="text" placeholder="Subject">
+                            <input id="email" type="email" placeholder="Email" required>
+                            <div class="error"></div>
+                            <input id="subject" type="text" placeholder="Subject">
                         </div>
                         <div class="third-row">
-                            <textarea name="message" id="" rows="7" placeholder="Message"></textarea>
+                            <textarea id="message" rows="7" placeholder="Message" required></textarea>
                         </div>
                         <button class="btn" type="submit">Send Message<i class="fas fa-paper-plane"></i></button>
                     </form>

@@ -904,14 +904,15 @@ header.sticky .nav-bar{
     color: var(--first-color);
     font-weight: 700;
  }
-
- .contact-form input, .contact-form textarea{
+/*======= Form ===== */
+.contact-form input,
+.contact-form textarea{
     border:none;
     color:var(--first-color);
     background: var(--transparent-color-02);
     font-size: var(--normal-font-size);
     margin-bottom:20px;
-    padding: 15px 40px 40px 20px;
+    padding: 15px;
     border-radius: 5px;
  }
  .contact-form textarea{
@@ -925,6 +926,7 @@ header.sticky .nav-bar{
 
 .contact-form .first-row input{
     width:100%;
+   
 }
 
 .contact-form .second-row{
@@ -935,7 +937,19 @@ header.sticky .nav-bar{
 .contact-form .second-row input{
     width:40%;
 }
-
+.contact-form input:focus{
+    outline: 0;
+}
+.contact-form.success input{
+    border-color: #09c372;
+}
+.contact-form.error input{
+    border-color: #ff3860;
+}
+.contact-form.error{
+    color: #ff3860;
+    font-size: 9px;
+}
 .contact-form .btn{
     border:none;
     margin-top:0;
@@ -1150,14 +1164,7 @@ footer a{
         font-size: 0.8em;
         line-height: 50px;
     }
-    /* Our clients
-    .client-swiper .swiper-slide{
-        flex-direction: column;
-    }
-    .client-details{
-        flex-direction: column;
-        font-size: 0.9rem;
-    } */
+    
     /* Contact Section */
     .contact .content{
         font-size: 0.9rem;
