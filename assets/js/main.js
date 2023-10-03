@@ -150,7 +150,7 @@ const setError =(element,message) => {
 }
 
 const isValidEmail =email =>{
-    const re =;
+    const re ='([\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z])*';
     return re.test(String(email).toLowerCase());
 }
 
@@ -171,7 +171,7 @@ const validateInputs = () => {
             setSuccess(email);
     }
 
-    if(subValue ===''){
+    if(subValue ===''){ 
         setError(Sub,'Subject is required');
         } else if(!isValidSubject){
             setSuccess(subject);
