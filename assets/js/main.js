@@ -129,7 +129,7 @@ function validateForm() {
 
     // Regular expression pattern for a more comprehensive email validation
     var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        // var namePattern =[A-Za-z];
+       
 
     if (name === "") {
         alert("Name must be filled out");
@@ -164,7 +164,7 @@ function validateForm() {
     return true;
 }
 //======= Form Submition==========
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwhqofHvgde-QA9zX8_t-OH6kGHkxYkjKxqSdmd8OyYPJO2d9BDWV1oWI8XRUkLwHqp/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzYsfnWmTI40HaiebuN4_7DeD8Bzj7xmVYfgsnjbPyktsyRmtvQFtyA2n4N-4SA23vn/exec';
     const form = document.forms['submit-to-google-sheet']
     const message = document.getElementById("message")
   
@@ -177,7 +177,7 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbwhqofHvgde-QA9zX8_t-
                 alert('Form Submitted');
                 setTimeout(()=>{
                     message.innerHTML = " "
-                },3000)
+                },2000)
             })
             .catch(error => console.error('Error!', error.message))
       }else{
