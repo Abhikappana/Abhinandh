@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhikappana</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    
+    <link rel="Bootstrap" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
  
 </head>
 <body>
-
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
     <!-- Scroll to top button -->
     <div class="scrollToTop-btn flex-center">
         <i class="fas fa-arrow-up"></i>
@@ -67,7 +67,7 @@
                 </svg>
             </div>
         </div>
-        <a href="#about" class="scroll-down">Scroll Down<i class="fa fa-arrow-down"></i> </a>
+        <a href="#contact" class="scroll-down">Scroll Down<i class="fa fa-arrow-down"></i> </a>
     </section>
 
 
@@ -87,21 +87,6 @@
                         <h4>A self-taught <span>Front-End Developer</span></h4>
                         <p>with a passion for crafting visually stunning and user-friendly web experiences.I'm not your typical developer. I didn't start with a formal education in computer science or web development. Instead, I embarked on this journey armed with an unyielding desire to learn, a stack of online tutorials, and a lot of late nights.</p>
                     </div>
-                    <!-- <ul class="professional-list">
-                        <li class="list-items">
-                            <h3>Projects</h3>
-                            <span>Success<br>5+</span>
-                        </li>
-                        <li class="list-items">
-                            <h3>Projects</h3>
-                            <span>Success<br>5+</span>
-                        </li>
-                        <li class="list-items">
-                            <h3>Projects</h3>
-                            <span>Success<br>5+</span>
-                        </li>
-                    </ul> -->
-                    <a href="" class="btn">Download CV<i class="fas fa-download"></i></a>
                 </div>
             </div>
         </div>
@@ -260,14 +245,14 @@
                                 <h3>Web Design</h3>
                                 <span>LandingPage</span>
                             </div>
-                            <img src="assets/img/LandingPage.png" alt="">
+                            <img src="assets/img/LandingPage.png" alt="landing">
                         </div>
                         <div class="portfolio-modal flex-center">
                             <div class="portfolio-modal-body">
                                 <i class="fas fa-times portfolio-close-btn"></i>
                                 <h3>Web Design</h3>
-                                <img src="assets/img/LandingPage.png" alt="">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quas rem error quaerat, tempore dolorum culpa nam maxime, mollitia enim, obcaecati nemo eligendi? Error corrupti rerum sequi, eius reprehenderit quisquam!</p>
+                                <img src="assets/img/LandingPage.png" alt="landing">
+                                <p>This is a landing page of LandingPage. It is a single-page website that is designed to capture the attention of visitors.</p>
                                 <a href="https://abhikappana.github.io/StarbucksLandingPage.github.io/" target="_blank">Preview</a>
                             </div>
                         </div>
@@ -280,13 +265,13 @@
                                 <h3>Calculator</h3>
                                 <span></span>
                             </div>
-                            <img src="assets/img/Calculator.png" alt="">
+                            <img src="assets/img/Calculator.png" alt="calc">
                         </div>
                         <div class="portfolio-modal flex-center">
                             <div class="portfolio-modal-body">
                                 <i class="fas fa-times portfolio-close-btn"></i>
                                 <h3>Web Design</h3>
-                                <img src="assets/img/Calculator.png" alt="imgs">
+                                <img src="assets/img/Calculator.png" alt="calc">
                                 <p>This is a simple calculator built with HTML, CSS, and JavaScript. It has basic functions like addition, subtraction, multiplication, and division. It also has a few more advanced functions like percentages and exponents. The calculator is easy to use and has a clean, modern design.<br>
                                     <a href="https://abhikappana.github.io/Calculator.github.io/" target="_blank">Preview</a>
                                 </p>
@@ -301,13 +286,13 @@
                                 <h3>Web Design</h3>
                                 <span>Adobe Clone</span>
                             </div>
-                            <img src="assets/img/Adobe.png" alt="">
+                            <img src="assets/img/Adobe.png" alt="samsung">
                         </div>
                         <div class="portfolio-modal flex-center">
                             <div class="portfolio-modal-body">
                                 <i class="fas fa-times portfolio-close-btn"></i>
                                 <h3>Adobe Clone</h3>
-                                <img src="assets/img/Adobe.png" alt="">
+                                <img src="assets/img/Adobe.png" alt="samsung">
                                 <p>This is a landing page of AdobeClone. It is a single-page website that is designed to capture the attention of visitors.<br>
                                     <a href="https://abhikappana.github.io/StarbucksLandingPage.github.io/" target="_blank">Preview</a>
                                 </p>
@@ -322,13 +307,14 @@
                                 <h3>Web Design</h3>
                                 <span>Samsung Clone</span>
                             </div>
-                            <img src="assets/img/samsung.png" alt="">
+                            <img src="assets/img/samsung.png" alt="samsung">
                         </div>
                         <div class="portfolio-modal flex-center">
+                                    
                             <div class="portfolio-modal-body">
                                 <i class="fas fa-times portfolio-close-btn"></i>
                                 <h3>Samsung Clone</h3>
-                                <img src="assets/img/samsung.png" alt="">
+                                <img src="assets/img/samsung.png" alt="samsungs">
                                 <p>This is a landing page for Samsung Clone. It is a single-page website that is designed to capture the attention of visitors.<br>
                                     <a href=" https://abhikappana.github.io/SamsungClone.github.io/" target="_blank">Preview</a>
                                 </p>
@@ -367,21 +353,19 @@
                 </div>
                 <div class="contact-right">
                     <p>I'm always open to discussing product<br><span>design work or partnerships</span></p>
-                    <form action="/" class="contact-form" id="form">
+                    <form action="" class="contact-form" method="post" name="submit-to-google-sheet" onsubmit="return validateForm()">
+
                         <div class="first-row">
-                            <input type="text" id="name" placeholder="Name">
-                            <div class="error"></div>
+                            <input type="text" placeholder="Name" id="name">
                         </div>
                         <div class="second-row">
-                            <input id="email" type="email" placeholder="Email">
-                            <div class="error"></div>
-                            <input id="subject" type="text" placeholder="Subject">
+                            <input type="email" placeholder="Email" id="email">
+                            <input type="text" placeholder="Subject" id="subject">
                         </div>
                         <div class="third-row">
-                            <textarea id="message" rows="7" placeholder="Message"></textarea>
+                            <textarea name="message" id="message" rows="7" placeholder="Message"></textarea>
                         </div>
-                        <button class="btn" type="submit">Send Message<i class="fas fa-paper-plane"></i></button>
-                    </form>
+                        <button class="btn" id="submit" type="submit">Send Message<i class="fas fa-paper-plane"></i></button>
                 </div>
             </div>
         </div>
@@ -410,7 +394,8 @@
             <p>&copy; 2023 by Abhi.All rights reserved.</p>
         </div>
     </footer>
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/jquery.validate.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

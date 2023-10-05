@@ -120,63 +120,77 @@ closeBtn.addEventListener("click", () => {
 });
 
 
+//========= contact validation==========
+function validateForm() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+    var subject = document.getElementById("subject").value;
 
-//Scroll reveal animations
-// Common reveal options to create reveal animations
+    // Regular expression pattern for a more comprehensive email validation
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (name === "") {
+        alert("Name must be filled out");
+        return false;
+    }
+    if (email === "") {
+        alert("Email must be filled out");
+        return false;
+    }
+    if (!email.match(emailPattern)) {
+        alert("Invalid email address");
+        return false;
+    }
+    if (subject === "") {
+        alert("subject must be filled out");
+        return false;
+    }
+    if (message === "") {
+        alert("message must be filled out");
+        return false;
+    }
+    
+    // Additional validation logic can be added here
+
+    // return formsheet();
+
+    return true;
+}
+//======= Form Submition==========
+const scriptURL = '1f2stSJxTP31bVOV6965xWVO9XMY0Ym1rUJ9y4IS_it8';
+    const form = document.forms['submit-to-google-sheet']
+    const message = document.getElementById("message")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      if(validateForm()){
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                message.innerHTML = "Message sent"
+                alert('Form Submitted');
+                setTimeout(()=>{
+                    message.innerHTML = " "
+                },3000)
+            })
+            .catch(error => console.error('Error!', error.message))
+      }else{
+        alert('validation/Submition failed');
+      }
+
+    })
+
+
+//======Scroll reveal animations=====
+// Common reveal options to create reveal  animations
 ScrollReveal({
     reset: true,
     distance: '50px',
     duration:1500,
-    delay:50
+    delay:50,
 });
-// Contact form
-const form = document.getElementById('form');
-const name= document.getElementById('name');
-const email= document.getElementById('email');
-const subject= document.getElementById('subject');
-form.addEventListener('submit', e => {
-    e.preventDefault();
 
-    validateInputs()
-});
- 
-const setError =(element,message) => {
-    const inputControl = element.parentElement;
-    const errorDisplay=inputControl.querySelector('.error');
 
-    errorDisplay = innerText = message;
-    inputControl.classList.add('success');
-    inputControl.classList.remove('error')
-}
-
-const isValidEmail =email =>{
-    const re ='([\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z])*';
-    return re.test(String(email).toLowerCase());
-}
-
-const validateInputs = () => {
-    const nameValue = nameValue.value.trim();
-    const emailValue = emailValue.value.trim();
-    const subValue = subValue.value.trim();
-
-    if(nameValue === ''){
-        setError(Name,'Name is required');
-    }else{
-         setSuccess(Name);
-    }
-
-    if(emailValue ===''){
-        setError(email,'Email is required');
-        } else if(!isValidEmail){
-            setSuccess(email);
-    }
-
-    if(subValue ===''){ 
-        setError(Sub,'Subject is required');
-        } else if(!isValidSubject){
-            setSuccess(subject);
-    }
-}
 //Target elements,and specify options to create reveal animations
 ScrollReveal().reveal('.home .info h2, .section-title-01, .section-title-02', {delay:400,orgin:'left'});
 ScrollReveal().reveal('.home .info h3, .home .info p, .about-info .btn', {delay:500,orgin:'right'});

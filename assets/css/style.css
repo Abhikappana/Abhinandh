@@ -905,14 +905,13 @@ header.sticky .nav-bar{
     font-weight: 700;
  }
 /*======= Form ===== */
-.contact-form input,
-.contact-form textarea{
+.contact-form input, .contact-form textarea{
     border:none;
     color:var(--first-color);
     background: var(--transparent-color-02);
     font-size: var(--normal-font-size);
     margin-bottom:20px;
-    padding: 15px;
+    padding: 15px 40px 40px 20px;
     border-radius: 5px;
  }
  .contact-form textarea{
@@ -926,7 +925,6 @@ header.sticky .nav-bar{
 
 .contact-form .first-row input{
     width:100%;
-   
 }
 
 .contact-form .second-row{
@@ -937,28 +935,12 @@ header.sticky .nav-bar{
 .contact-form .second-row input{
     width:40%;
 }
-.contact-form .first-row input:focus{
-    outline: 0;
-}
-.contact-form.success input{
-    border-color: #09c372;
-}
-.contact-form.error input{
-    border-color: #ff3860;
-}
-.contact-form.error{
-    color: #ff3860;
-    font-size: 9px;
-}
 
 .contact-form .btn{
     border:none;
     margin-top:0;
     border-radius:5px;
     cursor: pointer;
-}
-.contact-form .btn i{
-    padding-left: 5px;
 }
 /* Footer */
 
@@ -1161,12 +1143,18 @@ footer a{
         margin-bottom: 40px;
     }
 
-    .contact-form .second-row{
-        flex-direction: column;
-    }
-    .contact-form .second-row input{
+    .contact-right .contactform{
         width: 100%;
     }
+    .contact-right .contactform input{
+        width:100%;
+        
+    }
+    .contact-right .contactform textarea{
+        width:100%;
+    }
+
+    
     /* Footer */
     footer .footer-container{
         flex-direction: column;
@@ -1185,9 +1173,14 @@ footer a{
         background: rgba(255,255,255,0.1);
         margin:10px 0 22px;
     }
-    
+    .contact-right{
+        width:100%;
 
+    }
+    
 }
+
+
 
 @media  screen and (max-width: 720px) {
 /*  Common style for all section */
@@ -1289,19 +1282,14 @@ footer a{
     }
     
    
-    /* Get in touch */
-    .get-in-touch .contact-card{
-        display: grid;
-    }
+    /* Contact */
 
     .contact-card .title{
         font-size: 0.6rem;
         line-height: 40px;
     }
 
-    .contact-card .contact-btn .btn{
-        font-size: 0.8rem;
-    }
+  
 
     
 }
