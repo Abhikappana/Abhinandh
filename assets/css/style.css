@@ -238,7 +238,7 @@ header.sticky .nav-bar{
     position: relative;
     max-width:1250px;
     min-height:100vh;
-    margin-left: 10%;
+    margin-left: 9%;
     padding: 2rem 2rem;
     flex-direction: column;
     justify-content: center;
@@ -909,6 +909,7 @@ header.sticky .nav-bar{
  .contact-right p span{
     color: var(--first-color);
     font-weight: 700;
+    
  }
 /*======= Form ===== */
 .contact-form input, .contact-form textarea{
@@ -917,8 +918,10 @@ header.sticky .nav-bar{
     background: var(--transparent-color-02);
     font-size: var(--normal-font-size);
     margin-bottom:20px;
-    padding: 15px 40px 40px 20px;
+    padding: 15px;
     border-radius: 5px;
+    
+    
  }
  .contact-form textarea{
     width:100%;
@@ -935,17 +938,20 @@ header.sticky .nav-bar{
 
 .contact-form .second-row{
     display:flex;
-    justify-content: space-between;
+    gap: 10px;
+    
 }
 
 .contact-form .second-row input{
-    width:40%;
+    width:50%;
+
+    
 }
 
 .contact-form .btn{
     border:none;
     margin-top:0;
-    border-radius:5px;
+    border-radius:10px;
     cursor: pointer;
 }
 /* Footer */
@@ -1154,6 +1160,7 @@ footer a{
     }
     .contact-right .contactform input{
         width:100%;
+       
         
     }
     .contact-right .contactform textarea{
@@ -1170,7 +1177,7 @@ footer a{
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     .footer-container .hr {
@@ -1179,10 +1186,7 @@ footer a{
         background: rgba(255,255,255,0.1);
         margin:10px 0 22px;
     }
-    .contact-right{
-        width:100%;
-
-    }
+    
     
 }
 
@@ -1233,6 +1237,7 @@ footer a{
     .home .home-container{
         max-width: 750px;
         display: grid;
+        margin-left: 15px;
     }
     .home .home-container .info h2{
         line-height:normal;
@@ -1263,7 +1268,7 @@ footer a{
 
     .home .home-container .media-icons a i{
         font-size:.8em;
-        padding-bottom: 6px;
+        padding-bottom: 2px;
     }
     
 
