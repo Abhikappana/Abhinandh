@@ -129,16 +129,16 @@ function validateForm() {
 
     // Regular expression pattern for a more comprehensive email validation
     var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        var namePattern =[A-Za-z];
+        // var namePattern =[A-Za-z];
 
     if (name === "") {
         alert("Name must be filled out");
         return false;
     }
-    else if (!name.match(namePattern)) {
-        alert("Enter a proper name");
-        return false;
-    }
+    // else if (!name.match(namePattern)) {
+    //     alert("Enter a proper name");
+    //     return false;
+    //}
     else if (email === "") {
         alert("Email must be filled out");
         return false;
