@@ -158,7 +158,7 @@ function validateForm() {
     return true;
 }
 //======= Form Submition==========
-const scriptURL = '1f2stSJxTP31bVOV6965xWVO9XMY0Ym1rUJ9y4IS_it8';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbydR8SjBmK01ZChGhMJIweyUb-CpeFeuGmuntMbpfJMFnIHMxGBWtrtL3vyrucJTdkJ/exec';
     const form = document.forms['submit-to-google-sheet']
     const message = document.getElementById("message")
   
