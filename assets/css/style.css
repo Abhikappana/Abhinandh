@@ -90,6 +90,7 @@ body{
     background: var(--body-bg-color);
     margin: 2rem 0 0 0;
     transition: 5s ease;
+    overflow-x: hidden;
    
 }
 
@@ -269,12 +270,12 @@ header.sticky .nav-bar{
 }
 .home-container .home-img{
     position:relative;
-    width: 450px;
-    height: 450px;
+    width: 80%;
+    
    
 }
 .home-container .home-img img{
-    width: 450px;
+    width: 100%;
 }
 
 .home-container .info{
@@ -401,6 +402,7 @@ header.sticky .nav-bar{
 
 .about-img{
     position:relative;
+
     
 }
 
@@ -974,6 +976,9 @@ footer{
 
 /* Media query max-width 1070px */
 @media  screen and (max-width:1070px) {
+    body{
+        overflow-x: hidden;
+    }
     /* header naavigation menu */
     .nav-bar{
         max-width: 1070px;
@@ -1067,11 +1072,12 @@ footer{
         margin-right: 35px;
     }
     .home-container .home-img {
-        width: 300px;
-        height:300px;
+        width: 80%;
+        max-width: 400px;
+        
     }
     .home-container .home-img img{
-        width: 300px;
+        width: 80%;
        
     }
     /* About section */
@@ -1079,9 +1085,6 @@ footer{
     .about .container .content{
         display: flex;
         width: 100%;
-        
-        
-        
     }
     .about-img img{
         width: 100%;
@@ -1090,7 +1093,15 @@ footer{
     .about-info{
         width: 100%;
     }
-    
+    .about-info .description h3{
+        font-size: 1.9em;
+    }
+    .about-info .description h4{
+        font-size: 1.25em;
+    }
+    .about-info .description p{
+        font-size: 1em;
+    }
     
     /* Contact Section */
     .contact .content{
@@ -1193,23 +1204,23 @@ footer{
     }
     .home-container .home-img{
         position: absolute;
-        top:-15%;
+        top:-16%;
         left: 15%;
-        width: 300px;
-        height: 300px;
+        width: 90%;
+       
     }
     .home-container .home-img img{
-        
-        width:300px;  
+        width: 85%;
     }
     .home  .home-container .info{
         padding-top: 10%;
         font-size: 0.9rem;
     }
-
+    .home .home-container .media-icons{
+        margin-bottom: 10px;
+    }
     .home .home-container .media-icons a i{
-        font-size:.8em;
-        padding-bottom: 2px;
+        font-size:.8em;   
     }
     
 
@@ -1227,7 +1238,7 @@ footer{
         
     }
     .about-img{
-        width: 100%;
+        width: 70%;
         justify-content: center;
     }
     .about-img img{
