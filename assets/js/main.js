@@ -176,6 +176,7 @@ function validateForm() {
             .then(response => {
                 message.innerHTML = "Message sent"
                 alert('Form Submitted');
+                window.location.reload();
                 setTimeout(()=>{
                     message.innerHTML = " "
                 },3000)
