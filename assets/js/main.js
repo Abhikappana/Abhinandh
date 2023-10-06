@@ -163,8 +163,9 @@ function validateForm() {
 
     return true;
 }
-//======= Form Submition==========
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzYsfnWmTI40HaiebuN4_7DeD8Bzj7xmVYfgsnjbPyktsyRmtvQFtyA2n4N-4SA23vn/exec';
+// ======= Form Submition==========
+   
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyHQO-sdxBnZUG8YL0NwOPLqrmJ7LRYHSD85e5LVAaq1xuGDCWHUX4z8TAS_rpstRO4/exec';
     const form = document.forms['submit-to-google-sheet']
     const message = document.getElementById("message")
   
@@ -177,15 +178,14 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbzYsfnWmTI40HaiebuN4_
                 alert('Form Submitted');
                 setTimeout(()=>{
                     message.innerHTML = " "
-                },2000)
+                },3000)
             })
             .catch(error => console.error('Error!', error.message))
       }else{
-        alert('validation/Submition failed');
+        alert('validation failed');
       }
 
     })
-
 
 //======Scroll reveal animations=====
 // Common reveal options to create reveal  animations
