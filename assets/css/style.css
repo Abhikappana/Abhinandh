@@ -275,7 +275,7 @@ header.sticky .nav-bar{
    
 }
 .home-container .home-img img{
-    width: 100%;
+    width: 80%;
 }
 
 .home-container .info{
@@ -1204,16 +1204,18 @@ footer{
     }
     .home-container .home-img{
         position: absolute;
-        top:-16%;
+        top:-10%;
         left: 15%;
         width: 90%;
+        min-width: 300px;
+        max-width: 400px;
        
     }
     .home-container .home-img img{
-        width: 85%;
+        width: 80%;
     }
     .home  .home-container .info{
-        padding-top: 10%;
+      
         font-size: 0.9rem;
     }
     .home .home-container .media-icons{
