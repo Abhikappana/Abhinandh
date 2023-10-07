@@ -390,13 +390,13 @@
                 </div>
                 <div class="contact-right">
                     <p>I'm always open to discussing product<br><span>design work or partnerships</span></p>
-                    <form class="contact-form" method="post" id="form" name="submit-to-google-sheet" onsubmit="return validateForm()">
+                    <form class="contact-form" role="form" method="post" id="form" name="submit-to-google-sheet" onsubmit="return validateForm()">
                         <div class="first-row">
-                            <input type="text" placeholder="Name" id="name">
+                            <input type="text" placeholder="Name" id="name" name="name">
                         </div>
                         <div class="second-row">
-                            <input  placeholder="Email" id="email">
-                            <input type="text" placeholder="Subject" id="subject">
+                            <input  placeholder="Email" id="email" name="email">
+                            <input type="text" placeholder="Subject" id="subject" name="subject">
                         </div>
                         <div class="third-row">
                             <textarea name="message" id="message" rows="7" placeholder="Message"></textarea>
