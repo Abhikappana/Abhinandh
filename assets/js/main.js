@@ -188,8 +188,8 @@ function validateForm() {
     return true;
 }
 
-======Scroll reveal animations=====
-Common reveal options to create reveal  animations
+// ======Scroll reveal animations=====
+// Common reveal options to create reveal  animations
 ScrollReveal({
     reset: true,
     distance: '50px',
