@@ -270,9 +270,7 @@ header.sticky .nav-bar{
 }
 .home-container .home-img{
     position:relative;
-    width: 80%;
-    
-   
+    width: 80%; 
 }
 .home-container .home-img img{
     width: 80%;
@@ -542,7 +540,7 @@ h4 label{
     width:85%;
 }
 .bar .Express:before{
-    width:85%;
+    width:80%;
 }
 .bar .MongoDB:before{
     width:80%;
@@ -1041,6 +1039,7 @@ footer{
     .nav-menu-btn{
         margin-left: 10%;
         display:block;
+        visibility: visible;
         background: url(/assets/img/menu-bar.webp);
         filter: var(--color-filter);
         background-size: 30px;
@@ -1177,11 +1176,25 @@ footer{
         padding: 20px;
     }
 
+    .nav-menu-btn{
+        margin-left: 10%;
+        display:block;
+        visibility: visible;
+        background: url(/assets/img/menu-bar.webp);
+        filter: var(--color-filter);
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        
+    }
     /* Home section */
     .home .home-container{
         position: relative;
         max-width: 750px;
-        display: grid;
+        /* display: grid; */
         margin-left: 15px;
     }
     .home .home-container .info h2{
@@ -1206,10 +1219,11 @@ footer{
         width: 80%;
     }
     .home  .home-container .info{
-      
+        
         font-size: 0.9rem;
     }
     .home .home-container .media-icons{
+        
         margin-bottom: 10px;
     }
     .home .home-container .media-icons a i{
