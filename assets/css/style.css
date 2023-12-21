@@ -466,7 +466,7 @@ header.sticky .nav-bar{
     margin: 0 auto;
 }
 
-.skills-info h4 label{
+h4 label{
     background: var(--second-color);
     color:#fff;
     font-size:var(--normal-font-size);
@@ -479,26 +479,8 @@ header.sticky .nav-bar{
     margin-bottom: 80px;
 }
 
-.edu-list .item{
-    background: var(--card-bg-color);
-    box-shadow: var(--box-shadow);
-    border-bottom: 3px solid var(--second-color);
-    padding:20px;
-    margin-top:15px;
-    border-radius: 6px;
-    transition: .3s ease;
-}
 
-.edu-list .item p{
-    color:var(--third-color);
-    font-size: var(--small-font-size);
-}
 
-.edu-list .item p span{
-    color: var(--first-color);
-    font-size: var(--normal-font-size);
-    font-weight: 500;
-}
 
 
 .education .bar{
@@ -545,16 +527,25 @@ header.sticky .nav-bar{
     width:97%;
 }
 .bar .CSS:before{
+    width:95%;
+}
+.bar .Bootstrap:before{
     width:90%;
 }
 .bar .Javascript:before{
-    width:80%;
+    width:85%;
 }
 .bar .Jquery:before{
-    width:87%;
+    width:80%;
 }
-.bar .React:before{
-    width:10%;
+.bar .Node:before{
+    width:85%;
+}
+.bar .Express:before{
+    width:85%;
+}
+.bar .MongoDB:before{
+    width:80%;
 }
 
 .edu-list .item:hover, .bar:hover, .experience-card:hover{
