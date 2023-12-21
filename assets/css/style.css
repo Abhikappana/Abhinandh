@@ -237,16 +237,17 @@ header.sticky .nav-bar{
 .home{
     display: flex;
     position: relative;
-    max-width:1250px;
-    min-height:100vh;
-    margin-left: 9%;
-    padding: 2rem 2rem;
+    max-width:100%;
+    min-height:93vh;
+    padding: 120px;
+    background-color: #000000; 
     flex-direction: column;
     justify-content: center;
 }
 
 .home .home-container{
     display: flex;
+    margin-bottom: 10px;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -290,7 +291,7 @@ header.sticky .nav-bar{
     color:var(--third-color);
     font-feature-settings: 1.3em;
     font-weight: 600;
-    line-height:50px;
+    line-height:50px; 
 }
 
 .home-container .info p{
@@ -313,22 +314,6 @@ header.sticky .nav-bar{
 
 .btn:hover{
     background: var(--hover-color);
-}
-
-
-.home .scroll-down{
-    color:var(--first-color);
-    font-size: var(--normal-font-size);
-    font-weight: 500;
-    margin-top:40px;
-
-}
-
-.home .scroll-down i{
-    color:var(--second-color);
-    margin-left: 12px;
-    font-size: 1.2em;
-    animation: arrow-down ease 2s infinite;
 }
 
 @keyframes arrow-down {
