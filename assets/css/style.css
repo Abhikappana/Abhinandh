@@ -1025,7 +1025,6 @@ footer{
         margin-left: 10%;
         display:block;
         visibility: visible;
-        background: url(/assets/img/menu-bar.webp);
         filter: var(--color-filter);
         background-size: 30px;
         background-position: center;
@@ -1161,19 +1160,16 @@ footer{
         padding: 20px;
     }
 
-    .nav-menu-btn{
-        margin-left: 10%;
+    .nav-menu-btn i{
+       font-size: 1.5rem;
+        padding-top: 10%;
         display:block;
         visibility: visible;
-        background: url(/assets/img/menu-bar.webp);
         filter: var(--color-filter);
-        background-size: 30px;
         background-position: center;
-        width: 40px;
-        height: 40px;
         cursor: pointer;
-        background-repeat: no-repeat;
-        
+     
+      
     }
     /* Home section */
     .home .home-container{
