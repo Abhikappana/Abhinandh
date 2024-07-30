@@ -47,7 +47,7 @@
  
  
      /*Background color */
-     --body-bg-color:hsl(var(--hue-color),56%, 12%);
+     --body-bg-color:hsl(var(--hue-color),56%, 6%);
      --card-bg-color:hsl(var(--hue-color),58%, 18%);
      --modal-bg-color:hsl(var(--hue-color),64%, 17%);
      --bg-transparent-color:rgba(255,255,255,.1);
@@ -240,7 +240,7 @@ header.sticky .nav-bar{
     max-width:100%;
     min-height:93vh;
     padding: 120px;
-    background-color: #000000; 
+     
     flex-direction: column;
     justify-content: center;
 }
@@ -269,13 +269,13 @@ header.sticky .nav-bar{
 .home-container .media-icons a{
     color:var(--hover-color);
 }
-.home-container .home-img{
+/* .home-container .home-img{
     position:relative;
     width: 80%; 
-}
-.home-container .home-img img{
+} */
+/* .home-container .home-img img{
     width: 80%;
-}
+} */
 
 .home-container .info{
     width:100%;
@@ -1022,7 +1022,7 @@ footer{
      }
 
     .nav-menu-btn{
-        margin-left: 10%;
+       
         display:block;
         visibility: visible;
         filter: var(--color-filter);
@@ -1043,17 +1043,17 @@ footer{
     }
   
     .media-icons{
-        margin-right: 35px;
+        margin-right: 3px;
     }
-    .home-container .home-img {
+    /* .home-container .home-img {
         width: 80%;
         max-width: 400px;
         
-    }
-    .home-container .home-img img{
+    } */
+    /* .home-container .home-img img{
         width: 80%;
        
-    }
+    } */
     /* About section */
     
     .about .container .content{
@@ -1161,8 +1161,9 @@ footer{
     }
 
     .nav-menu-btn i{
-       font-size: 1.5rem;
-        padding-top: 10%;
+        font-size: 1.5rem;
+        padding-top: 10px;
+        padding-left: 65px;
         display:block;
         visibility: visible;
         filter: var(--color-filter);
@@ -1176,7 +1177,7 @@ footer{
         position: relative;
         max-width: 750px;
         /* display: grid; */
-        margin-left: 15px;
+        margin-left: 5px;
     }
     .home .home-container .info h2{
         line-height:normal;
@@ -1187,7 +1188,7 @@ footer{
     .home .home-container .info h3{
         font-size: 1.2em;
     }
-    .home-container .home-img{
+    /* .home-container .home-img{
         position: absolute;
         top:-10%;
         left: 15%;
@@ -1195,10 +1196,10 @@ footer{
         min-width: 300px;
         max-width: 400px;
        
-    }
-    .home-container .home-img img{
+    } */
+    /* .home-container .home-img img{
         width: 80%;
-    }
+    } */
     .home  .home-container .info{
         
         font-size: 0.9rem;
