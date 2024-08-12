@@ -1,2 +1,2 @@
 # AbhinandhPortfolio
-<a href="https://abhikappana.github.io/Abhinandh/">Preview</a>
+<a href="https://abhinandh.vercel.app/">Preview</a>
